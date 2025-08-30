@@ -34,14 +34,23 @@ Your project folder should look like this:
 
 /your-project-folder
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 ├── /assets
+
 │   └── /images
+
 │       ├── image1.png
+
 │       ├── image2.png
+
 │       ├── image3.png
+
 │       ├── image4.png
+
 │       └── image5.png
 
 **Technologies Used**
