@@ -32,7 +32,9 @@ To get the image slider running, simply follow these steps:
 
 Your project folder should look like this:
 
+
 /your-project-folder
+
 ├── index.html
 
 ├── style.css
