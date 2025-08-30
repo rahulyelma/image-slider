@@ -1,0 +1,140 @@
+/* Reset margins, padding, and make box-sizing consistent across all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    color: #333;
+}
+
+/* Styling the main heading of the slider */
+.slider-title {
+    font-size: clamp(2rem, 5vw, 4rem); /* Adjusts size based on screen */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #48cae4, #00bbf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Outer box that holds the entire slider */
+.slider-container {
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* The row where images slide left and right */
+.slider-images {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth slide effect */
+    width: 100%;
+    height: auto;
+}
+
+/* Each image inside the slider */
+.slider-images img {
+    min-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Common style for both next/previous buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 100;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the buttons */
+.slider-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Left arrow position */
+.prev-btn {
+    left: 20px;
+}
+
+/* Right arrow position */
+.next-btn {
+    right: 20px;
+}
+
+/* Wrapper for the small dots under the slider */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+/* Style for each dot */
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* When hovering on a dot */
+.dot:hover {
+    transform: scale(1.2);
+}
+
+/* Highlight for the active dot */
+.dot.active {
+    background-color: #ffffff;
+    transform: scale(1.4);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .slider-btn {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+    .prev-btn {
+        left: 10px;
+    }
+    .next-btn {
+        right: 10px;
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}

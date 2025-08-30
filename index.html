@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Slider</title>
+
+  <!-- Adding a modern Google font for a neat and clean look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Connecting external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Main heading for the image slider -->
+  <h1 class="slider-title">IMAGE SLIDER</h1>
+
+  <!-- Wrapper for the whole slider -->
+  <div class="slider-container">
+
+    <!-- Section where images will appear -->
+    <div class="slider-images">
+      <!-- Images will be added here with JavaScript -->
+    </div>
+
+    <!-- Button to move to the previous image -->
+    <button id="prevBtn" class="slider-btn prev-btn">
+      <!-- Left arrow icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+      </svg>
+    </button>
+
+    <!-- Button to move to the next image -->
+    <button id="nextBtn" class="slider-btn next-btn">
+      <!-- Right arrow icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      </svg>
+    </button>
+
+    <!-- Small dots below the slider to show which image is active -->
+    <div class="slider-dots"></div>
+
+  </div>
+
+  <!-- Linking JavaScript file to handle slider functionality -->
+  <script src="script.js"></script>
+</body>
+</html>
